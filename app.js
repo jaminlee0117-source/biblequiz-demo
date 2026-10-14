@@ -1,10 +1,12 @@
 (() => {
-  const Q = window.QUESTIONS;
+  const ALL = window.QUESTIONS;
   const MODE = {
     PERSON: "모드 1 · 인물 이름 맞추기",
     INITIAL: "모드 2 · 초성 퀴즈",
     BLANK: "모드 3 · 빈칸 채우기"
   };
+  const MODE_ORDER = ["PERSON", "INITIAL", "BLANK"];
+  let Q = [];            // 선택한 모드의 문항
   const NEXT_DELAY = 800;     // 정답 후 자동 전환 (PRD 3.2)
   const REVEAL_DELAY = 1200;  // → 키로 정답 공개 후 전환
   const IDLE_CHECK = 1000;    // 초성 입력: 글자 수는 찼지만 오답일 때 판정 대기
@@ -27,9 +29,10 @@
     return a;
   };
   // 정답이 항상 1번에 오지 않도록 보기 순서를 섞어 둔다
-  Q.forEach(q => { if (q.options) q.shuffled = shuffle(q.options); });
+  ALL.forEach(q => { if (q.options) q.shuffled = shuffle(q.options); });
 
-  let idx = -1;          // -1: 시작 화면, Q.length: 종료 화면
+  let idx = -1;          // -1: 모드 선택 화면, Q.length: 종료 화면
+  let ready = false;     // 삽화 프리로드 완료 여부
   let locked = false;    // 현재 문항 판정 완료 여부
   let gen = 0;           // 문항이 바뀌면 증가 → 이전 타이머 무효화
   let view = null;       // 현재 문항의 { pick(i), reveal(), input? }
@@ -213,36 +216,54 @@
     };
   }
 
-  function renderStart() {
+  // 시작 화면: 3개 모드 중 선택
+  function menu() {
+    gen++;
+    idx = -1;
+    Q = [];
+    locked = false;
+    stage.classList.remove("ok", "bad");
+    feedback.className = "feedback";
+    feedback.textContent = "";
+    stage.replaceChildren();
     header();
     const box = el("div", "center");
-    const btn = el("button", "btn primary", "불러오는 중…");
-    btn.disabled = true;
-    btn.onclick = () => go(0);
-    box.append(el("h1", null, "📖 성경 퀴즈"), el("p", "sub", "인물 · 초성 · 빈칸 — 총 " + Q.length + "문항"), btn);
-    stage.append(box);
-
-    // 모든 삽화를 미리 불러온다 (실패해도 시작은 가능)
-    const imgs = Q.filter(q => q.image).map(q => new Promise(res => {
-      const im = new Image();
-      im.onload = im.onerror = res;
-      im.src = q.image;
-    }));
-    Promise.all(imgs).then(() => {
-      btn.disabled = false;
-      btn.textContent = "시작 ▶";
-      btn.focus();
+    const modes = el("div", "modes");
+    MODE_ORDER.forEach((type, i) => {
+      const b = el("button", "btn mode");
+      const count = ALL.filter(q => q.type === type).length;
+      b.append(el("span", "n", i + 1), el("span", null, MODE[type].split(" · ")[1]), el("small", null, count + "문항"));
+      b.disabled = !ready;
+      b.onclick = () => startMode(type);
+      modes.append(b);
     });
+    box.append(
+      el("h1", null, "📖 성경 퀴즈"),
+      el("p", "sub", ready ? "퀴즈를 선택하세요 (1~3)" : "불러오는 중…"),
+      modes
+    );
+    stage.append(box);
+  }
+
+  function startMode(type) {
+    if (!ready) return;
+    Q = ALL.filter(q => q.type === type);
+    solved.clear();
+    go(0);
   }
 
   function renderEnd() {
     const box = el("div", "center");
-    const btn = el("button", "btn primary", "다시 하기 (R)");
-    btn.onclick = restart;
+    const again = el("button", "btn primary", "다시 하기 (R)");
+    again.onclick = restart;
+    const back = el("button", "btn", "모드 선택 (Esc)");
+    back.onclick = menu;
+    const row = el("div", "chips");
+    row.append(again, back);
     box.append(
       el("h1", null, "수고하셨습니다! 🙌"),
       el("div", "score", solved.size + " / " + Q.length),
-      btn
+      row
     );
     stage.append(box);
   }
@@ -265,11 +286,15 @@
     if (code === "KeyT" && !inInput) return toggleTheme();
 
     if (idx < 0) {
-      if ((code === "Enter" || code === "Space" || code === "ArrowRight") && !$("stage").querySelector("button:disabled")) {
-        e.preventDefault();
-        go(0);
-      }
+      const m = /^(?:Digit|Numpad)([1-3])$/.exec(code);
+      if (m) { e.preventDefault(); startMode(MODE_ORDER[Number(m[1]) - 1]); }
       return;
+    }
+
+    if (code === "Escape") {
+      e.preventDefault();
+      if (inInput) e.target.blur();
+      return menu();
     }
 
     if (code === "Space" || code === "ArrowRight" || code === "ArrowLeft") {
@@ -291,5 +316,15 @@
     if (m) { e.preventDefault(); view.pick(Number(m[1]) - 1); }
   });
 
-  renderStart();
+  menu();
+
+  // 모든 삽화를 미리 불러온 뒤 모드 선택 활성화 (실패해도 시작은 가능)
+  Promise.all(ALL.filter(q => q.image).map(q => new Promise(res => {
+    const im = new Image();
+    im.onload = im.onerror = res;
+    im.src = q.image;
+  }))).then(() => {
+    ready = true;
+    if (idx < 0) menu();
+  });
 })();

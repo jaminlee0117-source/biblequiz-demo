@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0" r="0.9"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#fde68a"/><stop offset="1" stop-color="#92400e"/></radialGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#glow)"/>
+  <!-- light beams -->
+  <g fill="#fff" opacity=".55"><path d="M240 0 L120 300 L180 300Z"/><path d="M240 0 L250 300 L310 300Z"/><path d="M240 0 L360 300 L420 300Z"/></g>
+  <path d="M0 290 Q120 275 240 290 T480 285 V360 H0Z" fill="#a16207"/>
+  <!-- road -->
+  <path d="M180 360 L230 290 L260 290 L330 360Z" fill="#d6a85c"/>
+  <!-- horse -->
+  <g transform="translate(360 220)">
+    <ellipse cx="0" cy="20" rx="50" ry="26" fill="#57534e"/>
+    <rect x="-40" y="34" width="10" height="44" fill="#57534e"/><rect x="28" y="34" width="10" height="44" fill="#57534e"/>
+    <path d="M38 10 L70 -30 L84 -24 L60 22Z" fill="#57534e"/>
+    <circle cx="76" cy="-22" r="3" fill="#fff"/>
+  </g>
+  <!-- Paul fallen, shielding eyes -->
+  <g transform="translate(190 300)">
+    <path d="M-60 -10 Q0 -30 50 -12 L50 10 L-60 10Z" fill="#b91c1c"/>
+    <circle cx="66" cy="-20" r="17" fill="#e7b48a"/>
+    <path d="M52 -26 Q66 -44 82 -26Z" fill="#1c1917"/>
+    <line x1="40" y1="-18" x2="70" y2="-46" stroke="#e7b48a" stroke-width="9" stroke-linecap="round"/>
+    <rect x="62" y="-52" width="22" height="10" rx="4" fill="#e7b48a" transform="rotate(-20 72 -46)"/>
+  </g>
+</svg>

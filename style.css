@@ -123,10 +123,17 @@ h1 { font-size: 64px; margin: 0 0 16px; }
 .feedback.bad { color: var(--bad); }
 .keys { font-size: 16px; color: var(--muted); }
 
+/* 모드 선택 */
+.modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.btn.mode { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 36px 24px; font-size: 36px; }
+.btn.mode .n { margin: 0; font-size: 48px; }
+.btn.mode small { font-size: 22px; color: var(--muted); font-weight: 600; }
+.btn.mode:disabled { text-decoration: none; }
+
 .score { font-size: 120px; font-weight: 900; color: var(--accent); margin: 16px 0; }
 
 @media (max-width: 900px) {
-  .person { grid-template-columns: 1fr; gap: 24px; }
+  .person, .modes { grid-template-columns: 1fr; gap: 24px; }
   .stage { margin: 16px; padding: 20px; }
   .top, .bottom { padding-left: 16px; padding-right: 16px; }
   .initial { font-size: 72px; }

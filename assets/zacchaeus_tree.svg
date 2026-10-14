@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <rect width="480" height="360" fill="#e0f2fe"/>
+  <rect x="0" y="290" width="480" height="70" fill="#d6a85c"/>
+  <!-- sycamore tree -->
+  <path d="M250 300 L265 170 L295 170 L310 300Z" fill="#78350f"/>
+  <path d="M272 190 L200 140 M290 185 L360 135" stroke="#78350f" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="280" cy="100" r="85" fill="#15803d"/>
+  <circle cx="200" cy="120" r="50" fill="#166534"/>
+  <circle cx="365" cy="115" r="50" fill="#166534"/>
+  <!-- Zacchaeus on branch -->
+  <g transform="translate(205 120)">
+    <circle cx="0" cy="0" r="14" fill="#e7b48a"/>
+    <path d="M-14 -2 Q0 -20 14 -2Z" fill="#7c2d12"/>
+    <circle cx="5" cy="-1" r="2.5" fill="#111"/>
+    <rect x="-11" y="13" width="22" height="26" rx="6" fill="#7e22ce"/>
+    <line x1="10" y1="18" x2="26" y2="4" stroke="#e7b48a" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- crowd -->
+  <g>
+    <g transform="translate(60 250)"><circle r="16" fill="#e7b48a"/><rect x="-16" y="16" width="32" height="60" rx="8" fill="#0369a1"/></g>
+    <g transform="translate(110 245)"><circle r="16" fill="#e7b48a"/><rect x="-16" y="16" width="32" height="60" rx="8" fill="#b91c1c"/></g>
+    <g transform="translate(400 250)"><circle r="16" fill="#e7b48a"/><rect x="-16" y="16" width="32" height="60" rx="8" fill="#ca8a04"/></g>
+    <!-- Jesus looking up -->
+    <g transform="translate(165 240)"><circle r="17" fill="#e7b48a"/><path d="M-17 -2 Q0 -24 17 -2 L17 10 Q0 0 -17 10Z" fill="#78350f"/><rect x="-17" y="17" width="34" height="62" rx="8" fill="#f8fafc"/><rect x="-4" y="17" width="8" height="62" fill="#dc2626"/></g>
+  </g>
+  <path d="M175 220 Q185 180 195 150" stroke="#f59e0b" stroke-width="3" stroke-dasharray="5 6" fill="none"/>
+</svg>

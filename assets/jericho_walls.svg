@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdba74"/><stop offset="1" stop-color="#fef3c7"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#sky)"/>
+  <rect x="0" y="270" width="480" height="90" fill="#d6a85c"/>
+  <!-- walls (left intact-ish, right crumbling) -->
+  <g fill="#b45309" stroke="#78350f" stroke-width="3">
+    <rect x="60" y="120" width="80" height="150"/>
+    <rect x="60" y="100" width="20" height="22"/><rect x="100" y="100" width="20" height="22"/>
+    <rect x="140" y="150" width="200" height="120"/>
+    <rect x="340" y="120" width="80" height="150"/>
+  </g>
+  <g stroke="#78350f" stroke-width="2"><line x1="140" y1="190" x2="340" y2="190"/><line x1="140" y1="230" x2="340" y2="230"/><line x1="60" y1="170" x2="140" y2="170"/><line x1="60" y1="220" x2="140" y2="220"/></g>
+  <!-- cracks and falling stones -->
+  <path d="M240 150 L225 185 L250 210 L230 270" stroke="#1c1917" stroke-width="5" fill="none"/>
+  <path d="M380 120 L365 160 L390 200" stroke="#1c1917" stroke-width="5" fill="none"/>
+  <g fill="#92400e" stroke="#78350f" stroke-width="2">
+    <rect x="345" y="85" width="26" height="20" transform="rotate(25 358 95)"/>
+    <rect x="395" y="70" width="22" height="18" transform="rotate(-20 406 79)"/>
+    <rect x="270" y="115" width="24" height="18" transform="rotate(15 282 124)"/>
+    <rect x="200" y="125" width="20" height="16" transform="rotate(-30 210 133)"/>
+  </g>
+  <!-- trumpet bearers -->
+  <g fill="#f8fafc">
+    <g transform="translate(60 290)"><circle cx="0" cy="0" r="12" fill="#e7b48a"/><rect x="-10" y="12" width="20" height="40" rx="5"/><path d="M8 0 L48 -14 L52 -4 Z" fill="#fbbf24"/></g>
+    <g transform="translate(150 295)"><circle cx="0" cy="0" r="12" fill="#e7b48a"/><rect x="-10" y="12" width="20" height="40" rx="5"/><path d="M8 0 L48 -14 L52 -4 Z" fill="#fbbf24"/></g>
+    <g transform="translate(240 300)"><circle cx="0" cy="0" r="12" fill="#e7b48a"/><rect x="-10" y="12" width="20" height="40" rx="5"/><path d="M8 0 L48 -14 L52 -4 Z" fill="#fbbf24"/></g>
+  </g>
+  <!-- sound waves -->
+  <g stroke="#7c2d12" stroke-width="3" fill="none"><path d="M300 270 Q310 285 300 300"/><path d="M312 262 Q326 285 312 308"/></g>
+</svg>
