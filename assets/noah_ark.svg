@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#93c5fd"/><stop offset="1" stop-color="#e0f2fe"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#sky)"/>
+  <g fill="none" stroke-width="12">
+    <path d="M40 250 A200 200 0 0 1 440 250" stroke="#ef4444"/>
+    <path d="M52 250 A188 188 0 0 1 428 250" stroke="#f97316"/>
+    <path d="M64 250 A176 176 0 0 1 416 250" stroke="#facc15"/>
+    <path d="M76 250 A164 164 0 0 1 404 250" stroke="#22c55e"/>
+    <path d="M88 250 A152 152 0 0 1 392 250" stroke="#3b82f6"/>
+    <path d="M100 250 A140 140 0 0 1 380 250" stroke="#8b5cf6"/>
+  </g>
+  <!-- ark -->
+  <path d="M90 230 L390 230 L360 290 L120 290Z" fill="#92400e" stroke="#451a03" stroke-width="4"/>
+  <line x1="105" y1="250" x2="375" y2="250" stroke="#451a03" stroke-width="3"/>
+  <line x1="115" y1="270" x2="365" y2="270" stroke="#451a03" stroke-width="3"/>
+  <rect x="160" y="180" width="160" height="50" fill="#b45309" stroke="#451a03" stroke-width="4"/>
+  <path d="M150 182 L240 145 L330 182Z" fill="#78350f" stroke="#451a03" stroke-width="4"/>
+  <rect x="180" y="195" width="22" height="18" fill="#fde68a"/><rect x="229" y="195" width="22" height="18" fill="#fde68a"/><rect x="278" y="195" width="22" height="18" fill="#fde68a"/>
+  <!-- giraffe -->
+  <g fill="#fbbf24"><rect x="335" y="135" width="12" height="50"/><ellipse cx="348" cy="133" rx="15" ry="9"/></g>
+  <!-- dove with olive leaf -->
+  <g transform="translate(120 90)">
+    <ellipse cx="0" cy="0" rx="22" ry="11" fill="#fff"/>
+    <path d="M-5 -5 Q10 -40 25 -30 Q15 -15 5 -2Z" fill="#fff" stroke="#cbd5e1"/>
+    <circle cx="18" cy="-4" r="7" fill="#fff"/><path d="M24 -4 L32 -2 L24 0Z" fill="#f59e0b"/>
+    <path d="M30 0 Q40 4 44 -2" stroke="#16a34a" stroke-width="3" fill="none"/>
+    <ellipse cx="44" cy="-4" rx="6" ry="3" fill="#16a34a"/>
+  </g>
+  <path d="M0 290 Q30 275 60 290 T120 290 T180 290 T240 290 T300 290 T360 290 T420 290 T480 290 V360 H0Z" fill="#1d4ed8"/>
+  <path d="M0 315 Q30 300 60 315 T120 315 T180 315 T240 315 T300 315 T360 315 T420 315 T480 315 V360 H0Z" fill="#1e3a8a"/>
+</svg>

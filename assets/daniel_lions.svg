@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <rect width="480" height="360" fill="#292524"/>
+  <path d="M0 0 H480 V360 H0Z M60 360 Q60 60 240 50 Q420 60 420 360Z" fill="#44403c" fill-rule="evenodd"/>
+  <ellipse cx="240" cy="60" rx="60" ry="18" fill="#fde68a" opacity=".9"/>
+  <path d="M190 60 L120 360 H360 L290 60Z" fill="#fde68a" opacity=".18"/>
+  <rect x="0" y="300" width="480" height="60" fill="#57534e"/>
+  <!-- lions -->
+  <g transform="translate(110 230)">
+    <ellipse cx="40" cy="50" rx="45" ry="22" fill="#f59e0b"/>
+    <circle cx="0" cy="0" r="40" fill="#b45309"/>
+    <circle cx="0" cy="4" r="26" fill="#f59e0b"/>
+    <circle cx="-9" cy="-2" r="4" fill="#1c1917"/><circle cx="9" cy="-2" r="4" fill="#1c1917"/>
+    <path d="M-6 12 L6 12 L0 18Z" fill="#1c1917"/>
+  </g>
+  <g transform="translate(370 230) scale(-1 1)">
+    <ellipse cx="40" cy="50" rx="45" ry="22" fill="#f59e0b"/>
+    <circle cx="0" cy="0" r="40" fill="#b45309"/>
+    <circle cx="0" cy="4" r="26" fill="#f59e0b"/>
+    <circle cx="-9" cy="-2" r="4" fill="#1c1917"/><circle cx="9" cy="-2" r="4" fill="#1c1917"/>
+    <path d="M-6 12 L6 12 L0 18Z" fill="#1c1917"/>
+  </g>
+  <!-- Daniel kneeling in prayer -->
+  <g transform="translate(240 190)">
+    <circle cx="0" cy="0" r="19" fill="#e7b48a"/>
+    <path d="M-19 -4 Q0 -26 19 -4 Q10 -14 0 -12 Q-10 -14 -19 -4Z" fill="#1c1917"/>
+    <path d="M-26 22 Q0 12 26 22 L34 110 L-34 110Z" fill="#1d4ed8"/>
+    <path d="M-8 30 L0 60 L8 30" stroke="#e7b48a" stroke-width="8" fill="none" stroke-linejoin="round"/>
+    <rect x="-34" y="104" width="68" height="10" fill="#fbbf24"/>
+  </g>
+</svg>

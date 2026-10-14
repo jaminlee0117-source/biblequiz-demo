@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <rect width="480" height="360" fill="#fef3c7"/>
+  <path d="M170 360 L210 120 L270 120 L310 360Z" fill="#d6a85c"/>
+  <!-- water walls -->
+  <path d="M0 40 Q40 20 80 40 T160 40 Q185 60 175 120 L150 360 H0Z" fill="#2563eb"/>
+  <path d="M0 80 Q40 60 80 80 T150 85 L140 360 H0Z" fill="#1d4ed8"/>
+  <path d="M480 40 Q440 20 400 40 T320 40 Q295 60 305 120 L330 360 H480Z" fill="#2563eb"/>
+  <path d="M480 80 Q440 60 400 80 T330 85 L340 360 H480Z" fill="#1d4ed8"/>
+  <g fill="#e0f2fe"><circle cx="40" cy="35" r="7"/><circle cx="120" cy="35" r="6"/><circle cx="440" cy="35" r="7"/><circle cx="360" cy="35" r="6"/><circle cx="170" cy="70" r="5"/><circle cx="310" cy="70" r="5"/></g>
+  <!-- Moses -->
+  <g transform="translate(222 200)">
+    <path d="M0 30 L36 30 L46 120 L-10 120Z" fill="#b91c1c"/>
+    <path d="M6 30 L30 30 L34 120 L2 120Z" fill="#f5f5f4"/>
+    <circle cx="18" cy="14" r="17" fill="#e7b48a"/>
+    <path d="M4 18 Q18 50 32 18 Q30 34 18 36 Q6 34 4 18Z" fill="#f5f5f4"/>
+    <path d="M0 10 Q18 -12 36 10 L36 0 Q18 -16 0 0Z" fill="#f5f5f4"/>
+    <line x1="36" y1="40" x2="68" y2="-8" stroke="#e7b48a" stroke-width="9" stroke-linecap="round"/>
+    <line x1="60" y1="-60" x2="76" y2="120" stroke="#78350f" stroke-width="7" stroke-linecap="round"/>
+    <line x1="0" y1="40" x2="-30" y2="-5" stroke="#e7b48a" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <!-- people following -->
+  <g fill="#78716c"><circle cx="205" cy="335" r="9"/><circle cx="235" cy="340" r="9"/><circle cx="265" cy="335" r="9"/><circle cx="250" cy="355" r="9"/><circle cx="220" cy="355" r="9"/></g>
+</svg>

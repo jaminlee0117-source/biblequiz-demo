@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#0c4a6e"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#sea)"/>
+  <g fill="#bae6fd" opacity=".7"><circle cx="60" cy="60" r="8"/><circle cx="80" cy="30" r="5"/><circle cx="420" cy="90" r="7"/><circle cx="440" cy="55" r="4"/></g>
+  <!-- big fish -->
+  <path d="M60 190 Q160 70 330 140 L330 250 Q160 320 60 190Z" fill="#475569"/>
+  <path d="M320 150 L430 90 L400 195 L430 290 L320 240Z" fill="#334155"/>
+  <path d="M80 200 Q170 290 320 235" fill="#cbd5e1"/>
+  <circle cx="150" cy="140" r="14" fill="#fff"/><circle cx="154" cy="140" r="7" fill="#0f172a"/>
+  <!-- open mouth -->
+  <path d="M55 190 L165 168 L165 222 Z" fill="#7f1d1d"/>
+  <!-- Jonah -->
+  <g transform="translate(118 170)">
+    <circle cx="0" cy="12" r="11" fill="#e7b48a"/>
+    <path d="M-10 6 Q0 -6 10 6" fill="#57534e"/>
+    <rect x="-8" y="22" width="16" height="22" rx="4" fill="#ca8a04"/>
+    <line x1="-8" y1="26" x2="-22" y2="10" stroke="#e7b48a" stroke-width="5" stroke-linecap="round"/>
+    <line x1="8" y1="26" x2="22" y2="10" stroke="#e7b48a" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <path d="M0 330 Q60 310 120 330 T240 330 T360 330 T480 330 V360 H0Z" fill="#a16207" opacity=".6"/>
+</svg>
